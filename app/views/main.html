@@ -1,0 +1,29 @@
+<div class="jumbotron">
+  <h1>'Allo, 'Allo!</h1>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+    Always a pleasure scaffolding your apps.
+  </p>
+  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+  <div ng-controller="MainCtrl">
+    <form name="inputForm" ng-submit="store()">
+      New item: <input type="text" name="newItem" ng-model="item.name" ng-minlength="3" ng-maxlength="10">
+      <span class="error" ng-show="inputForm.newItem.$error.required">
+        Required!
+      </span>
+      <br>
+    </form>
+    <hr>
+    <tt>item = {{item}}</tt><br/>
+    <tt>itemlist = {{itemList}}</tt><br>
+    <tt>inputForm.newItem.$valid = {{inputForm.newItem.$valid}}</tt><br>
+    <tt>inputForm.newItem.$error = {{inputForm.newItem.$error}}</tt><br>
+    <tt>inputForm.$valid = {{inputForm.$valid}}</tt><br>
+    <tt>inputForm.$error.required = {{!!inputForm.$error.required}}</tt><br>
+    <tt>inputForm.$error.minlength = {{!!inputForm.$error.minlength}}</tt><br>
+    <tt>inputForm.$error.maxlength = {{!!inputForm.$error.maxlength}}</tt><br>
+  </div>
+</div>
+
+<div>
+</div>
